@@ -40,6 +40,7 @@ def index():
 @app.route('/alumnos/new', methods=['POST', 'GET'])
 def create_alumno():
     if request.method == 'POST':
+        #Agregar un nuevo alumno
         no_control = request.form['no_control']
         nombre = request.form['nombre']
         ap_paterno = request.form['ap_paterno']
@@ -50,6 +51,7 @@ def create_alumno():
         db.session.add(nvo_alumno)
         db.session.commit()
         return redirect(url_for('index'))
+    #Si no es POST, regresa el formulario
     return render_template('create_alumno.html')
 
 
