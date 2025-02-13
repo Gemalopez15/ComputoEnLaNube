@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Agregar alumnos{% endblock %}
+{% block content %}
+<h3>Agregar alumno</h3>
+
+<form action="{{ url_for('create_alumno') }}" method="POST">
+    <div class="form-group mb-3">
+        <label for="no_control">No. control</label>
+        <input type="text" class="form-control" id="no_control" name="no_control" required>
+    </div>
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <br>
+    <div>
+        <label for="ap_paterno">Apellido paterno</label>
+        <input type="text" class="form-control" id="ap_paterno" name="ap_paterno" required>
+    </div>
+    <br>
+    <div>
+        <label for="ap_materno">Apellido materno</label>
+        <input type="text" class="form-control" id="ap_materno" name="ap_materno" required>
+    </div>
+    <br>
+    <div>
+        <label for="semestre">Semestre</label>
+        <input type="number" class="form-control" id="semestre" name="semestre" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+{% endblock %}
