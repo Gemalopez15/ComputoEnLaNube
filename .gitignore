@@ -5,3 +5,4 @@ Scripts/
 Include/
 Lib/
 Scripts/
+.env
